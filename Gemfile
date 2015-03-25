@@ -12,6 +12,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap_form'
 gem 'bootswatch-rails'
+gem 'factory_girl_rails'
 
 group :development do
   gem 'byebug'
@@ -26,4 +27,6 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
 end
