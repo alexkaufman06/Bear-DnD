@@ -11,13 +11,10 @@ describe "the add a user process" do
     expect(page).to have_content "Welcome! You have signed up successfully."
   end
 
-
   it "errors" do
     visit root_path
     click_on "Sign Up"
     click_button("Sign Up")
     expect(page).to have_content "Email can't be blank"
   end
-
-
 end
