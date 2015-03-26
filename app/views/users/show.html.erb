@@ -1,5 +1,5 @@
 <% if current_user.listings.any? %>
-  <h4>Here are <%= current_user.email %>'s Listings</h4>
+  <h4>Here are <%= current_user.email %>'s Listings:</h4>
   <ul>
     <% current_user.listings.each do |listing| %>
       <li>
@@ -7,7 +7,10 @@
         Price: $<%= listing.price %><br>
         Location: <%= listing.location %><br>
         Property Type: <%= listing.property_type %><br>
-        <%= link_to "Edit Listing", edit_listing_path(listing.id), class: "btn btn-primary" %>
+        <%= link_to "Edit", edit_listing_path(listing.id), class: "btn btn-xs btn-primary" %>
+        <%= link_to "Delete", listing_path(listing.id), class: "btn btn-xs btn-danger",
+                                                data: {confirm: "You sure you want to delete",
+                                                       method: "delete"} %>
         <hr>
       </li>
     <% end %>

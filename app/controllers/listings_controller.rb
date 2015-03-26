@@ -33,10 +33,13 @@ class ListingsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @listing = Listing.find(params[:id])
-  #   @listing.destroy
-  #   flash[:danger] = "Listing Successfully Deleted!"
+  def destroy
+    @user = User.find(current_user.id)
+    @listing = Listing.find(params[:id])
+    @listing.destroy
+    flash[:danger] = "Listing Successfully Deleted!"
+    redirect_to user_path(@user)
+  end
 
 private
   def listing_params
