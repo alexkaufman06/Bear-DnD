@@ -13,6 +13,9 @@ gem 'bootstrap-sass', '~> 3.3.4'
 gem 'bootstrap_form'
 gem 'bootswatch-rails'
 gem 'factory_girl_rails'
+gem 'therubyracer'
+gem 'selenium-webdriver'
+gem 'faker'
 
 group :development do
   gem 'byebug'

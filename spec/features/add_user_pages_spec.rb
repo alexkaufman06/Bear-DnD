@@ -4,7 +4,7 @@ describe "the add a user process" do
   it "adds a new user" do
     visit root_path
     click_on "Sign Up"
-    fill_in "Email", with: "user@email.com"
+    fill_in "Email", with: Faker::Internet.email
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
     click_button "Sign Up"
