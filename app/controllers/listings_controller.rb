@@ -20,7 +20,20 @@ class ListingsController < ApplicationController
     end
   end
 
-  # def destroy 
+  def edit
+    @listing = Listing.find(params[:id])
+  end
+
+  def update
+    @user = User.find(current_user.id)
+    @listing = Listing.find(params[:id])
+    if @listing.update(listing_params)
+      flash[:success] = "Listing Succesfully Updated"
+      redirect_to user_path(@user)
+    end
+  end
+
+  # def destroy
   #   @listing = Listing.find(params[:id])
   #   @listing.destroy
   #   flash[:danger] = "Listing Successfully Deleted!"

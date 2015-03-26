@@ -7,6 +7,7 @@
         Price: $<%= listing.price %><br>
         Location: <%= listing.location %><br>
         Property Type: <%= listing.property_type %><br>
+        <%= link_to "Edit Listing", edit_listing_path(listing.id), class: "btn btn-primary" %>
         <hr>
       </li>
     <% end %>
