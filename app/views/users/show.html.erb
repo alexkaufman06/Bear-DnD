@@ -1,0 +1,16 @@
+<% if current_user.listings.any? %>
+  <h4>Here are <%= current_user.email %>'s Listings</h4>
+  <ul>
+    <% current_user.listings.each do |listing| %>
+      <li>
+        <hr>
+        Price: $<%= listing.price %><br>
+        Location: <%= listing.location %><br>
+        Property Type: <%= listing.property_type %><br>
+        <hr>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no listings yet!</p>
+<% end %>

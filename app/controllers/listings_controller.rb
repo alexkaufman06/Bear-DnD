@@ -20,6 +20,11 @@ class ListingsController < ApplicationController
     end
   end
 
+  # def destroy 
+  #   @listing = Listing.find(params[:id])
+  #   @listing.destroy
+  #   flash[:danger] = "Listing Successfully Deleted!"
+
 private
   def listing_params
     params.require(:listing).permit(:price, :location, :property_type)
