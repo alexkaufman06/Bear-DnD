@@ -2,10 +2,10 @@ require 'rails_helper'
 
 describe "the login user process" do
   it "logs the user in" do
-    FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user)
     visit root_path
     click_on "Login"
-    fill_in "Email", with: "Joe@aol.com"
+    fill_in "Email", with: user.email
     fill_in "Password", with: "password"
     click_button "Login"
     expect(page).to have_content "Signed in successfully"
