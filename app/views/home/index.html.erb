@@ -1,1 +1,18 @@
 <%= link_to "Add Listing", new_listing_path %>
+
+<% if @listings.any? %>
+  <h4>Here are some listings:</h4>
+  <ul>
+    <% @listings.each do |listing| %>
+      <li>
+        <hr>
+        Price: $<%= listing.price %><br>
+        Location: <%= listing.location %><br>
+        Property Type: <%= listing.property_type %><br>
+        <hr>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no listings yet!</p>
+<% end %>
