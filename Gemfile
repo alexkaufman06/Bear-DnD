@@ -24,12 +24,12 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :test do
   gem 'chromedriver-helper'
   gem 'factory_girl_rails'
   gem 'shoulda-matchers'
-  gem 'capybara'
   gem 'launchy'
 end
