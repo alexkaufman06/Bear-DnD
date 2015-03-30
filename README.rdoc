@@ -1,28 +1,45 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# Bear Dnd
+This is a clone of the Airbnb app. It was built at Epicodus using Ruby on Rails and Bootstrap.  The gem devise
+was used to handle user authentication.  [View Site Here](https://rails--blogger.herokuapp.com/)
+## Setup Instructions:
+### Gems Used:
+```
+rails
+pg
+sass-rails
+uglifier
+coffee-rails
+jquery-rails
+turbolinks
+pry
+bootstrap-sass
+shoulda-matchers
+rspec-rails
+capybara
+```
+### Install Bundler:
+```
+$ gem install bundler
+```
+### Run Bundler:
+```
+$ bundle
+```
+### Start the database:
+```
+$ postgres
+```
+### Create databases:
+```
+$ rake db:create
+$ rake db:migrate
+$ rake db:test:prepare
+$ rails server
+```
+Type the url localhost:3000 into your web browser.
+### Bug Reports
+None known
+### Author
+Crystal Contreras-Grossman
+Alex Kaufman
+#### MIT License
