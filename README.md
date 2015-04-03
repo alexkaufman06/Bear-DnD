@@ -40,6 +40,6 @@ Type the url localhost:3000 into your web browser.
 ### Bug Reports
 None known
 ### Author
-Crystal Contreras-Grossman
+Crystal Contreras-Grossman  
 Alex Kaufman
 #### MIT License
