@@ -1,6 +1,6 @@
 # Bear Dnd
 This is a clone of the Airbnb app. It was built at Epicodus using Ruby on Rails and Bootstrap.  The gem devise
-was used to handle user authentication.  [View Site Here](https://rails--blogger.herokuapp.com/)
+was used to handle user authentication.
 ## Setup Instructions:
 ### Gems Used:
 ```
